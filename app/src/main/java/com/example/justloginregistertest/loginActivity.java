@@ -25,6 +25,12 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         mDBOpenHelper = new DBOpenHelper(this);
+        findViewById(R.id.other).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {startActivity(new Intent(loginActivity.this,Other3rd.class));
+            }
+        });
+
     }
 
 //   @BindView(R.id.iv_loginactivity_back)
@@ -57,26 +63,13 @@ public class loginActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         switch (view.getId()) {
-            //case R.id.iv_loginactivity_back:
-                //TODO 返回箭头功能
-            //    finish();//销毁此Activity
-            //    break;
+
             case R.id.tv_loginactivity_register:
-                //TODO 注册界面跳转
+
                 startActivity(new Intent(this, RegisterActivity.class));
                 finish();
                 break;
-            //case R.id.tv_loginactivity_forget:   //忘记密码
-                //TODO 忘记密码操作界面跳转
-            //    startActivity(new Intent(this, FindPasswordActivity.class));
-            //    break;
-            //case R.id.tv_loginactivity_check:    //短信验证码登录
-                // TODO 短信验证码登录界面跳转
-            //    startActivity(new Intent(this, MessageLoginActivity.class));
-            //    finish();
-            //    break;
-
-            case R.id.bt_loginactivity_login:
+                case R.id.bt_loginactivity_login:
                 String name = mEtLoginactivityUsername.getText().toString().trim();
                 String password = mEtLoginactivityPassword.getText().toString().trim();
                 if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(password)) {

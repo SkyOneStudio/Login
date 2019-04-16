@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.justloginregistertest.loginActivity">
+        <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.justloginregistertest.RegisterActivity"></activity>
-        <activity android:name="com.example.justloginregistertest.MainActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Other3rd"></activity>
     </application>
 
 </manifest>

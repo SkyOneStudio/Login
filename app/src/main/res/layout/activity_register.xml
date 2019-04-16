@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.justloginregistertest.RegisterActivity"
-    android:background="#eeeeee"
+    android:background="@drawable/loginbg"
     >
 
     <RelativeLayout
@@ -133,6 +133,7 @@
                     android:layout_marginRight="10dp"
                     android:hint="请输入4位验证码" />
 
+
                 <ImageView
                     android:id="@+id/iv_registeractivity_showCode"
                     android:layout_width="0dp"
@@ -142,6 +143,7 @@
                     android:onClick="onClick"
                     android:layout_marginTop="-10dp"
                 />
+
             </LinearLayout>
         </LinearLayout>
         <!-- 注册按钮 -->
@@ -165,7 +167,7 @@
             >
             <TextView
                 android:layout_centerInParent="true"
-                android:text="注册即代表同意《用户协议》"
+                android:text="注册即代表同意《用户协议》(并没有"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
