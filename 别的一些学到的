@@ -1,0 +1,31 @@
+View控件都是有点击属性的 不只是Button ， ImageView和TextView也可以 暂时没有找到制作好看的按钮的方法 所以部分的按钮直接使用了ImageView和textView作为按钮
+
+目前发现布局界面文字对齐操作有待学习
+
+透明色 #00000000（但是还没有用上）
+
+
+android:onClick="onClick"
+  
+这是应用了一个开源库，详细信息在loginActivity.java 中有注释
+  
+一般监听OnClickListener事件，我们都是通过Button button = (Button)findViewById(....);
+
+button.setOClickLisener....这样的方式来实现。
+
+这段时间看各大开放平台的demo，发现其实可以在xml中定义好方法名称，在Activity中实现该方法就可以了。
+
+            <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="share_activity_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+            
+            public void share_activity_back(View v) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+             }
