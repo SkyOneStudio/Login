@@ -61,6 +61,50 @@ db = getReadableDatabase();
 
 #### loginActivity
 
+实现登录注册功能
+
+#### Regist
+
+实现注册功能
+
+布局文件
+
+####activity_login
+
+设置成相对布局 在整体上方放三个东西，这三个东西也是相对布局 顶部三个东西摆放好之后 然后是输入框 所以线性布局 垂直
+
+注意最后有一句： android:onClick="onClick"
+
+这是应用了一个开源库，详细信息在loginActivity.java 中有注释
+
+一般监听OnClickListener事件，我们都是通过Button button = (Button)findViewById(....);
+
+button.setOClickLisener....这样的方式来实现。
+
+这段时间看各大开放平台的demo，发现其实可以在xml中定义好方法名称，在Activity中实现该方法就可以了。
+  
+    <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="share_activity_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+            
+            public void share_activity_back(View v) {
+            Intent intent = new Intent(this, MainActivity.class);
+              startActivity(intent);
+                }
+                
+
+然后制作了一个第三方登陆界面 因为还没有制作具体的第三方界面 所以使用了AlertDialog
+
+
+
+
+
 
       
       
