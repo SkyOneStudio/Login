@@ -69,7 +69,7 @@ db = getReadableDatabase();
 
 布局文件
 
-####activity_login
+#### activity_login
 
 设置成相对布局 在整体上方放三个东西，这三个东西也是相对布局 顶部三个东西摆放好之后 然后是输入框 所以线性布局 垂直
 
@@ -100,6 +100,19 @@ button.setOClickLisener....这样的方式来实现。
                 
 
 然后制作了一个第三方登陆界面 因为还没有制作具体的第三方界面 所以使用了AlertDialog
+
+## 其他
+View控件都是有点击属性的 不只是Button ， ImageView和TextView也可以 暂时没有找到制作好看的按钮的方法 所以部分的按钮直接使用了ImageView和textView作为按钮
+
+
+
+目前发现布局界面文字对齐操作有待学习
+
+
+
+透明色 #00000000（但是还没有用上）
+
+
 
 
 
